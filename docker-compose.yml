@@ -1,4 +1,3 @@
-version: "2"
 services:
   webapp:
     build:
@@ -27,6 +26,13 @@ services:
       - 3400:3306
     volumes:
       - my-db:/var/lib/mysql
+
+  mailer:
+    image: schickling/mailcatcher
+    container_name: mailer
+    ports:
+      - 1025:1025
+      - 1080:1080
 
 volumes:
   my-db:

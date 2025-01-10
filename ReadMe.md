@@ -13,7 +13,7 @@ git clone https://github.com/aungkokoye/lodeberry-symfony-2025.git symfony
 ```
 
 
-### Set up symfony
+### Symfony set up 
 
 ```
 docker-compose up --build -d
@@ -23,4 +23,17 @@ npm install
 npm run dev
 ```
 
-Check you website in browser http://127.0.0.1:7750/
+### Database set up
+
+```
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
+
+Check you website in [here!](http://127.0.0.1:7750) 
+
+
+### Local env mail catcher 
+
+We are using Schickling Mailcatcher, so all emails  sent by app will be catch in [here!](http://127.0.0.1:1080)
+
