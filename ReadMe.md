@@ -30,10 +30,18 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 ```
 
-Check you website in [here!](http://127.0.0.1:7750) 
+### Create admin user
+This command will create admin user ```admin@loadberry.com``` with password ```password```.
+```
+php  bin/console  app:admin-user-create admin@loadberry.com password 
+```
+
+#### Check your website in [here!](http://127.0.0.1:7750) 
 
 
 ### Local env mail catcher 
 
-We are using Schickling Mailcatcher, so all emails  sent by app will be catch in [here!](http://127.0.0.1:1080)
+We are using Schickling Mailcatcher, which captures all emails sent by the application. 
+
+#### You can access the email interface [here!](http://127.0.0.1:1080)
 
